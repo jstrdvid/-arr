@@ -1,23 +1,23 @@
 # Setting up Media Management Services on Synology NAS with Docker and Portainer
 
-##Introduction
+## Introduction
 
 Setting up media management services on your Synology NAS can greatly enhance your media consumption experience. In this guide, we'll walk through the installation process for Sonarr, Radarr, Lidarr, and other essential services using Docker and Portainer. The instructions assume that you have already installed Portainer on your Synology NAS.
 
-##Prerequisites
+## Prerequisites
 
 Install Portainer: Follow the guide How to Install Portainer on Your Synology NAS to set up Portainer:
 https://mariushosting.com/how-to-install-portainer-on-your-synology-nas/
 
-##Create a Dedicated User and Group:
+## Create a Dedicated User and Group:
 Utilize the DSM Control Panel to create a dedicated user and group for the Docker containers.
 
-##SSH Connection for User Information:
+## SSH Connection for User Information:
 Connect to your NAS using SSH to obtain the user information. Use the command id User (replace "User" with the newly created user).
 Note the values for UID and GID returned by the command.
 
 
-##Create Necessary Folders:
+## Create Necessary Folders:
 In the shared docker folder, create the following directory structure:
 ```
 docker/
@@ -46,7 +46,7 @@ multimedia/
   |_musiques/
 ```
 
-##Docker Compose File:
+## Docker Compose File:
 Create a new stack file under Portainer's Stack section with the following content. Replace PGID and PUID with the values obtained from the SSH command.
 ```
 version: '3.3'
@@ -165,12 +165,12 @@ services:
             - PUID=1028
 ```
 
-##Radarr Configuration:
-###Configure Prowlarr:
+## Radarr Configuration:
+### Configure Prowlarr:
 Obtain the Radarr API key from Settings → General → API key.
 Radarr API Key
 In Prowlarr, navigate to Settings → Apps and add the Radarr configuration to synchronize indexers.
-###Configure Rdtclient:
+### Configure Rdtclient:
 Configuration details for Rdtclient will be provided later in this guide.
 Conclusion
 
