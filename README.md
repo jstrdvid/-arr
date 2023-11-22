@@ -19,7 +19,7 @@ Note the values for UID and GID returned by the command.
 
 ##Create Necessary Folders:
 In the shared docker folder, create the following directory structure:
-'''
+```
 docker/
   |
   |_portainer/
@@ -36,19 +36,19 @@ docker/
             |_lidar/
             |_radarr/
             |_sonarr/
-'''
+```
 Create a multimedia folder with the structure (or adapt the docker-compose file to your need):
-'''
+```
 multimedia/
   |
   |_films/
   |_series/
   |_musiques/
-'''
+```
 
 ##Docker Compose File:
 Create a new stack file under Portainer's Stack section with the following content. Replace PGID and PUID with the values obtained from the SSH command.
-'''
+```
 version: '3.3'
 services:
     overseerr:
@@ -163,7 +163,7 @@ services:
         environment:
             - PGID=100
             - PUID=1028
-'''
+```
 
 ##Radarr Configuration:
 ###Configure Prowlarr:
