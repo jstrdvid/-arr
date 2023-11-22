@@ -167,6 +167,7 @@ services:
             - PGID=100
             - PUID=1028
 ```
+If you don't want some services like jellyfin, simply delete jellyfin section (Radarr(Movies) or Sonarr(Series) or Lidarr(Music) and Rdtclient(download manager); Prowlarr(indexers) are important)
 
 ## Radarr Configuration:
 ### Configure Prowlarr:
