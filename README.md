@@ -13,8 +13,11 @@ https://mariushosting.com/how-to-install-portainer-on-your-synology-nas/
 Utilize the DSM Control Panel to create a dedicated user and group for the Docker containers.
 
 ## SSH Connection for User Information:
-Connect to your NAS using SSH to obtain the user information. Use the command id User (replace "User" with the newly created user).
-Note the values for UID and GID returned by the command.
+Connect to your NAS using SSH to obtain the user information. Use the command:
+```
+id User
+```
+(replace "User" with the newly created user). Note the values for UID and GID returned by the command.
 
 
 ## Create Necessary Folders:
