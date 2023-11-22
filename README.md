@@ -169,15 +169,12 @@ services:
 ```
 If you don't want some services like jellyfin, simply delete jellyfin section (Radarr(Movies) or Sonarr(Series) or Lidarr(Music) and Rdtclient(download manager); Prowlarr(indexers) are important)
 
+## Configure Rdtclient:
+Configuration details for Rdtclient will be provided later in this guide.
+....
+
 ## Radarr Configuration:
 ### Configure Prowlarr:
 Obtain the Radarr API key from Settings → General → API key.
 Radarr API Key
-In Prowlarr, navigate to Settings → Apps and add the Radarr configuration to synchronize indexers.
-### Configure Rdtclient:
-Configuration details for Rdtclient will be provided later in this guide.
-Conclusion
-
-You've now set up the foundation for media management on your Synology NAS using Docker and Portainer. Continue configuring each service according to your preferences, and enjoy seamless media organization and consumption.
-
-Happy media management!
+In Prowlarr, navigate to Settings → Apps and add the Radarr configuration to synchronize indexers. (You can also add some indexers into prowlarr)
